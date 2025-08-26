@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/*.tmp": true,
+        "**/~$*.docx": true
+    },
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "kleinsasser_resume.tex$",
+                "cmd": "command -v pandoc >/dev/null 2>&1 && pandoc --from=latex --to=plain kleinsasser_resume.tex -o kleinsasser_resume.txt || echo 'pandoc not found, skipping'"
+            }
+        ],
+        "autoClearConsole": true
+    }
+}

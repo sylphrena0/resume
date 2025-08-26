@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}       % set main text size
+\def\Margin{0.25in}
+% set paper size to letter. change to a4paper for resumes outside of North America
+\usepackage[letterpaper, top=\Margin, bottom=\Margin,left=\Margin, right=\Margin]{geometry}
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright{}                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{customlink}{HTML}{af62d1}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=customlink,
+  urlcolor=customlink,
+  filecolor=customlink,
+  citecolor=customlink
+}
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Sylphrena Kleinsasser}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\href{mailto:syl@kleinsasser.dev}{syl@kleinsasser.dev} | \href{https://github.com/sylphrena0}{github.com/sylphrena0} | US/CA Dual Citizen} % | \href{https://www.linkedin.com/in/sylphrenakleinsasser/}{in/sylphrenakleinsasser}
+\vspace{4pt}
+
+Full-Stack Software Engineer with a passion for front-end development and a knack for DevOps Engineering. Pride in communication and problem solving, creative and quick to learn new frameworks and skills. Loves effective abstraction, elegant software architecture, and (well-written) documentation.
+
+% \vspace{-10pt}
+
+% skills section
+% \section*{Skills}
+
+% Languages:
+% Java, TypeScript, JavaScript, C++, Python, HTML, CSS, SCSS
+
+% Scripting: 
+% NSIS, Bash, Batch
+
+% Build Tools / Package Managers:
+% CMake, Maven, NPM, Yarn
+
+% Frontend:
+% Electron, Node, React, Swing, Django, Flask
+
+% Protocols:
+% Serial, REST APIs, LDAP3
+
+% DevOps/QA:
+% Azure DevOps, CI Pipelines, JUnit, Playwright
+
+% Databases: 
+% MySQL, SQLite3, PostgreSQL
+
+% Data Science:
+% Machine Learning, Data Processing, Error Propagation
+
+% Python Libs:
+% PySide6, Qt6, Pandas, PySimpleGUI, NLTK, Pillow
+
+% SysAdmin:
+% Proxmox, OPNsense, FreePBX, Portainer, Authentik, Active Directory
+
+% Misc:
+% Log4j, Spring Boot, Docker, Git, Arduino, CAD, Robotics, Technical Documentation
+
+
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Experience}
+\textbf{Full-Stack Software Engineer,} {Jovian Software Consulting, LLC} --- \textit{Remote} \hfill July 2023--Present \\
+\vspace{-9pt}
+\begin{itemize}[leftmargin=0.35in]
+  \item Released and maintained a cutting-edge data modeling application with Electron, React, TypeScript, and Java
+  \item Implemented performance improvements to a critical release tool by eliminating redundant calculations and utilizing multi-threading, reducing execution time by 5x, decreasing ongoing payroll and cloud resource overhead
+  \vspace{-9pt}
+  \begin{itemize}
+    \item Established effective architecture choices, enabling effortless long-term maintenance and quick enhancements, resulting in high reliability and strong praise from team and clients for its robust, accessible UI/UX
+  \end{itemize}
+  \vspace{-9pt}
+  \item Founded a service-oriented C++ embedded project focused on scalability and security. Integrated services for deployment with Docker, which were instrumental deliverables that secured new contracts for our team
+  \item Established Azure DevOps CI/CD pipelines, robust tests, implementing comprehensive automation strategies that enhanced team productivity, reduced deployment friction, and maintained rigorous code quality standards through linters and quality gates across several active projects
+\end{itemize}
+\vspace{-9pt}
+\textbf{SKILLS:} Java, TypeScript, JavaScript, C++, CMake, Maven, Spring Boot, Node, Yarn, React, Swing, Electron, JUnit, Playwright, Docker, Git, Azure DevOps, CI Pipelines, Log4j, NSIS/Bash/Batch Scripts, Technical Documentation
+\vspace{9pt}
+
+\textbf{Software Developer,} {North Mountain Supply, LLC} --- \textit{Hybrid} \hfill May 2021--July 2023 \\
+\vspace{-9pt}
+\begin{itemize}[leftmargin=0.35in]
+  \item Developed, deployed, and maintained an on-premises web application to control serial displays, enhancing communication for warehouse leadership team with announcements and order data
+  \item Built a modern Django web system for order management, interfacing with Amazon Vendor REST APIs for efficient batch label creation---eliminated reliance on third-party solutions, reducing monthly overhead
+  \item Streamlined accounting processes with a script leveraging REST APIs to update banking spreadsheets
+  \item Deployed firewalls, phone servers, active directory, and other critical on-premises server infrastructure
+\end{itemize}
+\vspace{-9pt}
+\textbf{SKILLS:} Python, JavaScript, Jinja, Django, Flask, SQLite3 Serial, REST APIs, OPNsense, Proxmox, LDAP3, SCSS
+% \vspace{9pt}
+
+\vspace{-9pt}
+
+% \vspace{-18.5pt}
+
+% projects section
+\section*{Open-Source Projects}
+\textbf{Hardcover} \hfill \href{https://hardcover.app/}{hardcover.app} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Core contributor to growing book tracking platform with 40k users (Ruby on Rails, React, Inertia.js)
+  \item Enhanced platform stability for 4k monthly active users by identifying, prioritizing, and resolving critical bugs and security vulnerabilities across the stack, ensuring reliable performance in the path to open sourcing
+\end{itemize}
+
+% \textbf{Project Title} \hfill \href{https://mitcommlab.mit.edu/meche/commkit/portfolio/}{project.com} \\
+% \vspace{-9pt}
+% \begin{itemize}
+%   \item Only list real projects, not mandatory school projects or trivial tutorial projects found online 
+%   \item Something that someone uses to solve a problem
+%   \item Something that has users (can be just you, as long as you use it often) and is actively maintained and not just rotting in a GitHub repo, never to see a PR for the rest of its life
+% \end{itemize}
+
+% \textbf{Project Title} \hfill \href{https://www.hardwareishard.net/portfolio-database}{blog.com/projectname} \\
+% \vspace{-9pt}
+% \begin{itemize}
+%   \item Resume checklist: \url{https://old.reddit.com/r/EngineeringResumes/wiki/checklist}
+%   \item Google Docs version of this template: \url{https://docs.google.com/document/d/1MBvhATv8y-ESORopRoLSZ3f3HjkM_Qa_f8fIHAEqgnI/edit}
+% \end{itemize}
+
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+\vspace{-18.5pt}
+
+% education section
+\section*{Education}
+\textbf{Lycoming College, Lycoming College} \hfill \textit{Graduated w/ Honors} \\
+Majors: Computer Science, Computational Physics (GPA: 3.99/4.00) --- Minor: Chemistry \hfill \textit{Summa Cum Laude} \\
+Student Leadership: Tutor (4 yrs), Resident Assistant (3 yrs), Senator (2 yrs), Teaching Assistant (1 yr) \\
+
+\vspace{9pt}
+\textbf{Haberberger Fellowship, Physics Capstone, and Honors Thesis} \hfill \href{https://github.com/sylphrena0/pybot}{github.com/sylphrena0/pybot} \\
+\vspace{-9pt}
+\begin{itemize}[leftmargin=0.35in]
+  \item Designed and developed a 3D printed RaspberryPi robot controlled via a Flask web interface and python backend. Integrated camera, proximity sensors, and GPS for real-time environment awareness
+\end{itemize}
+\vspace{-9pt}
+\textbf{SKILLS:} Arduino, Python, JavaScript, Flask, CAD, Robotics, MySQL, Bash, Technical Documentation
+\vspace{9pt}
+
+
+\textbf{Undergraduate Researcher (\href{https://new.nsf.gov/funding/initiatives/reu}{NSF REU}),} {Cornell University (\href{https://www.chess.cornell.edu}{CHESS}/\href{https://www.classe.cornell.edu/StudentOpportunities/ProjectList2022.html}{CLASSE}),} \hfill \href{https://github.com/sylphrena0/classe}{github.com/sylphrena0/classe}
+\vspace{-9pt}
+\begin{itemize}[leftmargin=0.35in]
+  \item Trained machine learning models with Scikit-Learn, modeling critical temperatures of superconductors
+  \item Extracted and cleaned features using Matminer, quantifying uncertainty models with ForestCI and MAPIE
+\end{itemize}
+\vspace{-9pt}
+\textbf{SKILLS:} Machine Learning, Python, Data Processing, Machine Learning Error Propagation, Technical Documentation
+\vspace{9pt}
+
+\textbf{Data Science Intern,} {American Physical Society} \hfill \href{https://github.com/sylphrena0/careerprocessingtool}{github.com/sylphrena0/careerprocessingtool} \\
+\vspace{-9pt}
+\begin{itemize}[leftmargin=0.35in]
+  \item  Developed \href{https://github.com/sylphrena0/careerprocessingtool}{Physics Job Data Anaylsis Tool}, using natural language processing to extract statistics for \href{https://www.aps.org/careers}{APS Careers}.
+\end{itemize}
+\vspace{-9pt}
+\textbf{SKILLS:} Python, PySide6, Qt6, Pandas, PySimpleGUI, NLTK, SQLite3, Pillow
+
+\vspace{9pt}
+
+\end{document}

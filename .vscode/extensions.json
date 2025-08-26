@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "emeraldwalk.runonsave",
+        "james-yu.latex-workshop",
+        "mathematic.vscode-latex",
+        "tecosaur.latex-utilities",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens",
+        "github.vscode-github-actions",
+        "davidanson.vscode-markdownlint",
+        "sonarsource.sonarlint-vscode"
+    ]
+}
