@@ -10,7 +10,7 @@ on:
         required: false
         type: boolean
       release_tag:
-        description: 'Optionally release tag. If specified, a release will be created with the specified tag.'
+        description: 'Optional release tag. If specified, a release will be created with the specified tag.'
         required: false
         type: string
 
