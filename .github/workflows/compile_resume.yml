@@ -37,7 +37,7 @@ jobs:
       with:
         root_file: kleinsasser_resume.tex
         extra_system_packages: pandoc
-        post_compile: pandoc --from=latex --to=plain kleinsasser_resume.tex -o kleinsasser_resume.txt
+        post_compile: pandoc --wrap=preserve --from=latex --to=plain kleinsasser_resume.tex -o kleinsasser_resume.txt
     - name: Upload Resume
       if: steps.check_resume.outputs.any_changed == 'true' || github.event.inputs.upload
       uses: actions/upload-artifact@v4
