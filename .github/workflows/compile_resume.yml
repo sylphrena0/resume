@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v7
     - name: Check for resume changes
       if: github.ref == 'refs/heads/main'
       id: check_resume
@@ -40,7 +40,7 @@ jobs:
         post_compile: pandoc --wrap=preserve --from=latex --to=plain kleinsasser_resume.tex -o kleinsasser_resume.txt
     - name: Upload Resume
       if: steps.check_resume.outputs.any_changed == 'true' || github.event.inputs.upload
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: Latest Resume
         path: |
@@ -55,7 +55,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Create GitHub Release
       if: (steps.check_resume.outputs.any_changed == 'true' && github.ref == 'refs/heads/main') || github.event.inputs.release_tag != ''
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v3
       with:
         tag_name: ${{ steps.tag_version.outputs.new_tag }}
         body: ${{ steps.tag_version.outputs.changelog }}
