@@ -28,7 +28,7 @@ jobs:
     - name: Check for resume changes
       if: github.ref == 'refs/heads/main'
       id: check_resume
-      uses: tj-actions/changed-files@v46
+      uses: tj-actions/changed-files@v47
       with:
         files: kleinsasser_resume.tex
     - name: Compile LaTeX
